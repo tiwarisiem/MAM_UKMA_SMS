@@ -1,13 +1,39 @@
 package mam.ukma.com.testcases;
 
-import org.testng.annotations.Test;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import mam.ukma.com.pages.LaunchPage;
 
 public class BaseTest {
 	
-	@Test
-	public void runTest(){
-		System.out.println("Test Selenium");
+WebDriver driver;
+	
+	public LaunchPage launchBrowser(String browser){
+		try{
+			if(browser.equalsIgnoreCase("mozilla")){
+				driver=new FirefoxDriver();
+			}
+			else if(browser.equalsIgnoreCase("chrome")){
+				driver=new ChromeDriver();
+			}
+			else if(browser.equalsIgnoreCase("ie")){
+				driver=new InternetExplorerDriver();
+			}
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		}
+		catch(NullPointerException exp){
+			System.out.println("Browser "+browser.toString()+" is not exist! "+exp.getMessage());
+		}
+		
+		return PageFactory.initElements(driver, LaunchPage.class);
+		
 	}
 	
-
 }
