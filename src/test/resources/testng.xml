@@ -2,7 +2,7 @@
 <suite name="My Sample Suite" parallel="tests">
 <test name="LoginTest">
     <classes>
-        <class name="mam.ukma.com.testcases.BaseTest" ></class> 
+        <class name="mam.ukma.com.testcases.LoginTest" ></class> 
     </classes>
 </test>
 </suite>
