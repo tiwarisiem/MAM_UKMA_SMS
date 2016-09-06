@@ -1,0 +1,5 @@
+mam\ukma\com\common\TopMenu.class
+mam\ukma\com\util\Constants.class
+mam\ukma\com\util\Selenium.class
+mam\ukma\com\base\UKMAPage.class
+mam\ukma\com\pages\LaunchPage.class
