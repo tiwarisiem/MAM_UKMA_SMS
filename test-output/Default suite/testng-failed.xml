@@ -10,7 +10,7 @@
     <classes>
       <class name="mam.ukma.com.testcases.LoginTest">
         <methods>
-          <include name="invalidLogin"/>
+          <include name="invalidLoginTest"/>
         </methods>
       </class> <!-- mam.ukma.com.testcases.LoginTest -->
     </classes>

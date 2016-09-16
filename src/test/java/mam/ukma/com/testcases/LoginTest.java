@@ -7,11 +7,20 @@ import org.testng.annotations.Test;
 
 import mam.ukma.com.pages.LaunchPage;
 import mam.ukma.com.pages.LoginPage;
+import mam.ukma.com.util.TestUtil;
+import mam.ukma.com.util.Xls_Reader;
 
 public class LoginTest extends BaseTest{
 	
+	//Xls_Reader xls=new Xls_Reader(System.getProperty("user.dir"+"\\xls\\Authentication.xlsx"));
+	Xls_Reader xls=new Xls_Reader("F:\\Selenium_Maven\\Project_Directory\\MAM_UKMA_SMS\\xls\\Authentication.xlsx");
 	@Test(dataProvider="getData")
-	public void invalidLogin(String username, String password){
+	public void invalidLoginTest(
+					String runMode,
+					String browser,
+					String username, 
+					String password,
+					String expectedResult){
 		LaunchPage lp=launchBrowser("chrome");
 		LoginPage loginPage=lp.goToHomePage("DEV");
 		loginPage.doLogin(username, password);
@@ -19,16 +28,10 @@ public class LoginTest extends BaseTest{
 			
 	}
 	
+	
 	@DataProvider
 	public Object[][] getData(){
-		
-		String[][] arr=new String[2][2];
-		arr[0][0]="Admin";
-		arr[0][1]="Globrin@313";
-		arr[1][0]="Adminyy";
-		arr[1][1]="Globrin@313";
-
-		return arr;
+		return TestUtil.getData(xls, "LoginTest");
 	}
 
 }

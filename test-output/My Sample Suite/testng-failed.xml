@@ -6,4 +6,13 @@
       <class name="mam.ukma.com.testcases.LoginTest"/>
     </classes>
   </test> <!-- LoginTest -->
+  <test name="LoginTest(failed)" parallel="tests">
+    <classes>
+      <class name="mam.ukma.com.testcases.LoginTest">
+        <methods>
+          <include name="invalidLogin"/>
+        </methods>
+      </class> <!-- mam.ukma.com.testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [My Sample Suite] -->
