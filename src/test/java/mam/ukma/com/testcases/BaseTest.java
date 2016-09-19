@@ -23,8 +23,8 @@ WebDriver driver;
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Tools\\chromedriver.exe");
 				driver=new ChromeDriver();
 			}
-			else if(browser.equalsIgnoreCase("ie")){
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Tools\\IEDriverServer.exe");
+			else if(browser.equalsIgnoreCase("IE")){
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Tools\\IEDriverServer.exe");
 				driver=new InternetExplorerDriver();
 			}
 			driver.manage().window().maximize();
