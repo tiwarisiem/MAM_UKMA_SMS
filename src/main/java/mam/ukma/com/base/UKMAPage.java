@@ -1,18 +1,26 @@
 package mam.ukma.com.base;
 
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+
+import mam.ukma.com.common.TopMenu;
 
 public class UKMAPage {
 	
 	public WebDriver driver;
+	private TopMenu topMenu;
 	
 	public UKMAPage(WebDriver driver){
 		this.driver=driver;
+		topMenu=PageFactory.initElements(driver, TopMenu.class);
+	}
+	
+	
+	public TopMenu getTopMenu(){
+		return topMenu;
 	}
 	
 	

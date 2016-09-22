@@ -5,7 +5,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -84,10 +86,33 @@ public class Selenium extends UKMAPage{
 		
 	}
 
-	public static void selectAndWait(){
-		
+	public static void selectByValue(WebElement selectcLocator, String selectValue){
+		Select select=new Select(selectcLocator);
+		if(selectcLocator.isDisplayed()){
+			if(selectcLocator.isEnabled()){
+				select.selectByValue(selectValue);
+			}
+			else
+				Assert.fail("Targated dropdown field is not enabled!");
+		}
+		else
+			Assert.fail("Targated dropdown field is not displayed!");
 	}
-
+	
+	public static void hoverOnWebElement(WebDriver driver, WebElement hoverElement){
+		logger.debug("| selectByValue | "+hoverElement);
+		try{
+			Actions action=new Actions(driver);
+			action.moveToElement(hoverElement);
+		}
+		catch(NoSuchElementException exp){
+			Assert.fail("Web Element "+hoverElement.toString()+" is not present on the page! "+exp.getMessage());
+		}
+		catch(StaleElementReferenceException exp){
+			Assert.fail("Oops Not Attched yet!" +hoverElement.getText()+ "||" +exp.getMessage());
+		}
+	
+	}
 	public static void waitForElementPresent(WebDriver driver, WebElement element){
 		WebDriverWait wait=new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(element));

@@ -35,6 +35,7 @@ public class LoginPage extends UKMAPage{
 		Selenium.type(txtUsername, username);
 		Selenium.type(txtPassword, password);
 		Selenium.clickAndWait(btnLogin);
+		result=isElementPresent(Constants.USERNAME_XPATH);
 		if(result){
 			return PageFactory.initElements(driver, LoginPage.class);
 		}

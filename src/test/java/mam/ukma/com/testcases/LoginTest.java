@@ -3,6 +3,7 @@ package mam.ukma.com.testcases;
 
 import org.testng.Assert;
 import org.testng.SkipException;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -32,7 +33,7 @@ public class LoginTest extends BaseTest{
 		if(page instanceof LoginPage){
 		Assert.assertEquals(loginPage.msgLoginError.getText().toString(), expectedResult);
 		}
-		else {
+		else if (page instanceof SearchJobPage){
 		String title=driver.getTitle().toString();
 		Assert.assertEquals(title, expectedResult);
 		}
@@ -42,6 +43,11 @@ public class LoginTest extends BaseTest{
 	@DataProvider
 	public Object[][] getData(){
 		return TestUtil.getData(xls, "LoginTest");
+	}
+	
+	@AfterTest
+	public void quit(){
+		super.quit();
 	}
 
 }

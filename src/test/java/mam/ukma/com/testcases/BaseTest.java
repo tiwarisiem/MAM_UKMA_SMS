@@ -38,4 +38,8 @@ WebDriver driver;
 		
 	}
 	
+	public void quit(){
+		if(driver!=null)
+		driver.quit();
+	}
 }
