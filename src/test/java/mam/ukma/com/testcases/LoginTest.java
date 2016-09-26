@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import mam.ukma.com.pages.LaunchPage;
 import mam.ukma.com.pages.LoginPage;
 import mam.ukma.com.pages.SearchJobPage;
-import mam.ukma.com.util.Selenium;
 import mam.ukma.com.util.TestUtil;
 import mam.ukma.com.util.Xls_Reader;
 

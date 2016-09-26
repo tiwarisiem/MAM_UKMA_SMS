@@ -11,7 +11,7 @@ import mam.ukma.com.util.Selenium;
 
 public class TopMenu {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	
 	@FindBy(xpath=Constants.JOBMENU_XPATH)
 	WebElement jobMenu;
@@ -19,6 +19,9 @@ public class TopMenu {
 	@FindBy(xpath=Constants.NEWJOBMENU_XPATH)
 	WebElement newJobMenu;
 	
+	public TopMenu(WebDriver driver){
+		this.driver=driver;
+	}
 	
 	public void hoverOnJobMenu(){
 		Selenium.hoverOnWebElement(driver, jobMenu);

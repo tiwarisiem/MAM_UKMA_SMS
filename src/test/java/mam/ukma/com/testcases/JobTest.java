@@ -8,7 +8,9 @@ import org.testng.annotations.Test;
 
 import mam.ukma.com.pages.LaunchPage;
 import mam.ukma.com.pages.LoginPage;
+import mam.ukma.com.pages.MeterPointPage;
 import mam.ukma.com.pages.SearchJobPage;
+import mam.ukma.com.pages.WorkStreamSelectionPage;
 import mam.ukma.com.util.TestUtil;
 import mam.ukma.com.util.Xls_Reader;
 
@@ -33,8 +35,14 @@ public class JobTest extends BaseTest{
 		if(page instanceof LoginPage){
 			Assert.fail("Credential Failure!");
 		}
-		 SearchJobPage landing=(SearchJobPage)driver;
-		 landing.getTopMenu().goToNewJob();
+		 SearchJobPage landing=(SearchJobPage)page;
+		 WorkStreamSelectionPage wrkStream=landing.getTopMenu().goToNewJob();
+		 MeterPointPage meterPointPage=wrkStream.selectWorkStream(workStream, meterWorkType);
+		 page=meterPointPage.enterMeterPointDetails(mprn);
+		 if(page instanceof MeterPointPage){
+			// String actualResult=meterPointPage.lblErrorMsg.getText();
+			 Assert.assertEquals(meterPointPage.lblErrorMsg.getText(), expectedResult);
+		 }
 		 
 	}
 		
@@ -43,9 +51,10 @@ public class JobTest extends BaseTest{
 			return TestUtil.getData(xls, "CreateJob");
 		}
 		
+		
 		@AfterTest
 		public void quit(){
 			super.quit();
-		}
+		} 
 	
 }

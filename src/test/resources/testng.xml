@@ -5,4 +5,9 @@
         <class name="mam.ukma.com.testcases.LoginTest" ></class> 
     </classes>
 </test>
+<test name="Meter Point Test">
+    <classes>
+        <class name="mam.ukma.com.testcases.JobTest" ></class> 
+    </classes>
+</test>
 </suite>

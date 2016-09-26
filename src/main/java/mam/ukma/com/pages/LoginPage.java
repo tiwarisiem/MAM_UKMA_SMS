@@ -26,7 +26,7 @@ public class LoginPage extends UKMAPage{
 	public WebElement msgLoginError;
 	
 	public LoginPage(WebDriver driver) {
-		super(driver);
+		super(driver); 
 		// TODO Auto-generated constructor stub
 	}
 

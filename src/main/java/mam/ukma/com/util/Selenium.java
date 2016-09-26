@@ -1,9 +1,12 @@
 package mam.ukma.com.util;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,13 +47,14 @@ public class Selenium extends UKMAPage{
 		}
 	}
 	
-	public static void typeAndWait(WebElement target, String typeValue){
+	public static void typeAndNext(WebElement target, String typeValue){
 		logger.debug("|typeAndWait|" +target+"|"+typeValue+"|");
 		try{
 			if(target.isDisplayed()){
 				if(target.isEnabled()){
 					target.clear();
 					target.sendKeys(typeValue);
+					target.sendKeys(Keys.TAB);
 				}
 				else{
 					System.out.println("Text field element is disabled at the moment!");
@@ -86,35 +90,86 @@ public class Selenium extends UKMAPage{
 		
 	}
 
-	public static void selectByValue(WebElement selectcLocator, String selectValue){
-		Select select=new Select(selectcLocator);
-		if(selectcLocator.isDisplayed()){
-			if(selectcLocator.isEnabled()){
-				select.selectByValue(selectValue);
+	public static void selectByVisibleText(WebElement selectcLocator, String selectValue){
+		
+		try{
+			Select select=new Select(selectcLocator);
+			if(selectcLocator.isDisplayed()){
+				if(selectcLocator.isEnabled()){
+					select.selectByVisibleText(selectValue);
+				}
+				else
+					Assert.fail("Targated dropdown field is not enabled!");
 			}
 			else
-				Assert.fail("Targated dropdown field is not enabled!");
+				Assert.fail("Targated dropdown field is not displayed!");
+			}
+		
+		catch(NoSuchElementException exp){
+			Assert.fail("Web Element "+selectcLocator.toString()+" is not present on the page! "+exp.getMessage());
 		}
-		else
-			Assert.fail("Targated dropdown field is not displayed!");
+		catch(StaleElementReferenceException exp){
+			Assert.fail("Oops Not Attched yet!" +selectcLocator.getText()+ "||" +exp.getMessage());
+		}
 	}
 	
+	public static void selectByIndex(WebElement selectcLocator, int selectValue){
+		
+		try{
+			Select select=new Select(selectcLocator);
+			if(selectcLocator.isDisplayed()){
+				if(selectcLocator.isEnabled()){
+					select.selectByIndex(selectValue);
+				}
+				else
+					Assert.fail("Targated dropdown field is not enabled!");
+			}
+			else
+				Assert.fail("Targated dropdown field is not displayed!");
+			}
+		
+		catch(NoSuchElementException exp){
+			Assert.fail("Web Element "+selectcLocator.toString()+" is not present on the page! "+exp.getMessage());
+		}
+		catch(StaleElementReferenceException exp){
+			Assert.fail("Oops Not Attched yet!" +selectcLocator.getText()+ "||" +exp.getMessage());
+		}
+	}
+		
+	
 	public static void hoverOnWebElement(WebDriver driver, WebElement hoverElement){
-		logger.debug("| selectByValue | "+hoverElement);
+		logger.debug("| hoverOnWebElement | "+hoverElement);
 		try{
 			Actions action=new Actions(driver);
-			action.moveToElement(hoverElement);
+			action.moveToElement(hoverElement).build().perform();
 		}
 		catch(NoSuchElementException exp){
 			Assert.fail("Web Element "+hoverElement.toString()+" is not present on the page! "+exp.getMessage());
-		}
+		}  
 		catch(StaleElementReferenceException exp){
 			Assert.fail("Oops Not Attched yet!" +hoverElement.getText()+ "||" +exp.getMessage());
 		}
 	
 	}
-	public static void waitForElementPresent(WebDriver driver, WebElement element){
-		WebDriverWait wait=new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.visibilityOf(element));
+	
+	public static void clickOnPage(WebDriver driver){
+		try{
+			Actions action=new Actions(driver);
+			action.click().build().perform();
+		}
+		catch(WebDriverException ex){
+			System.out.println(ex.getMessage());
+		}
+	}
+	
+	public static void waitForElementPresent(WebDriver driver, WebElement elementToBeClickable){
+		logger.debug("| waitTillElementClickable |" +elementToBeClickable);
+		try{
+			WebDriverWait wait=new WebDriverWait(driver, 20);
+			wait.until(ExpectedConditions.elementToBeClickable(elementToBeClickable));
+		}
+		catch(TimeoutException exp){
+			Assert.fail(exp.getMessage());
+		}
 	}
 }
