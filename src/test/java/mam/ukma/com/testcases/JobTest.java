@@ -2,10 +2,11 @@ package mam.ukma.com.testcases;
 
 import org.testng.Assert;
 import org.testng.SkipException;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import mam.ukma.com.pages.JobDetailsPage;
 import mam.ukma.com.pages.LaunchPage;
 import mam.ukma.com.pages.LoginPage;
 import mam.ukma.com.pages.MeterPointPage;
@@ -27,7 +28,7 @@ public class JobTest extends BaseTest{
 			String mprn,
 			String existingMSN,
 			String expectedResult){
-		if(!TestUtil.isTestRunnable(xls, "CreateJob"))
+		if(!TestUtil.isTestRunnable(xls, "CreateJob") || runMode.equals("N"))
 			throw new SkipException("Test Case is not runnable!");
 		LaunchPage lp=launchBrowser(browser);
 		LoginPage login=lp.goToHomePage("DEV");
@@ -43,6 +44,11 @@ public class JobTest extends BaseTest{
 			// String actualResult=meterPointPage.lblErrorMsg.getText();
 			 Assert.assertEquals(meterPointPage.lblErrorMsg.getText(), expectedResult);
 		 }
+		 else if(page instanceof JobDetailsPage){
+			 JobDetailsPage jobDetailsPage=(JobDetailsPage)page;
+			 jobDetailsPage.saveJob();
+		 }
+		
 		 
 	}
 		
@@ -52,7 +58,7 @@ public class JobTest extends BaseTest{
 		}
 		
 		
-		@AfterTest
+		@AfterMethod
 		public void quit(){
 			super.quit();
 		} 

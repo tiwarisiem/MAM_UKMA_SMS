@@ -61,8 +61,12 @@ public class MeterPointPage extends UKMAPage{
 	//	Selenium.waitForElementPresent(driver, txtMeterPointRefNo);
 		Selenium.typeAndNext(txtMeterPointRefNo, meterPointRefNo);
 		Selenium.clickOnPage(driver);
+		/*
 		boolean result=isElementPresent(Constants.METERPOINT_ERRORMSG_XPATH); 
 		if(result){
+			return PageFactory.initElements(driver, MeterPointPage.class);
+		} */
+		if(!btnNext.isEnabled()){
 			return PageFactory.initElements(driver, MeterPointPage.class);
 		}
 		Selenium.selectByIndex(ddPressureTier, 1);
@@ -71,7 +75,7 @@ public class MeterPointPage extends UKMAPage{
 		Selenium.type(txtAddress2, "222");
 		Selenium.type(txtPostTown, "Gurgaon");
 		Selenium.type(txtPostCode, "AB1 0AB");
-		Selenium.type(ddlTitle, "Mr");
+		Selenium.selectByIndex(ddlTitle, 1);
 		Selenium.type(txtSurName, "Tiwari");
 		Selenium.type(txtTelephone1, "9818159545");
 		Selenium.clickAndWait(btnNext);

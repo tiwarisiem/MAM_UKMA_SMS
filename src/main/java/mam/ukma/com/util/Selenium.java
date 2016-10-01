@@ -17,12 +17,13 @@ import org.testng.Assert;
 import mam.ukma.com.base.UKMAPage;
 
 public class Selenium extends UKMAPage{
-	
+
 	public static Logger logger=Logger.getLogger("devpinoyLogger");
 
+	
 	public Selenium(WebDriver driver) {
 		super(driver);
-		
+		// TODO Auto-generated constructor stub
 	}
 	
 	public static void type(WebElement target, String typeValue){
@@ -172,4 +173,30 @@ public class Selenium extends UKMAPage{
 			Assert.fail(exp.getMessage());
 		}
 	}
+	
+	public static void waitForElementSelectable(WebDriver driver, WebElement elementToBeSelectable){
+		logger.debug("| waitTillElementClickable |" +elementToBeSelectable);
+		try{
+			WebDriverWait wait=new WebDriverWait(driver, 20);
+		//	wait.until(ExpectedConditions.elementToBeClickable(elementToBeClickable));
+			wait.until(ExpectedConditions.elementToBeSelected(elementToBeSelectable));
+		}
+		catch(TimeoutException exp){
+			Assert.fail(exp.getMessage());
+		}
+	}
+	
+	public static void waitForElementVisible(WebDriver driver, WebElement elementToBeSelectable){
+		logger.debug("| waitTillElementClickable |" +elementToBeSelectable);
+		try{
+			WebDriverWait wait=new WebDriverWait(driver, 20);
+		//	wait.until(ExpectedConditions.elementToBeClickable(elementToBeClickable));
+			wait.until(ExpectedConditions.visibilityOf(elementToBeSelectable));
+		}
+		catch(TimeoutException exp){
+			Assert.fail(exp.getMessage());
+		}
+	}
+
+
 }
