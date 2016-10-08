@@ -3,6 +3,7 @@ package mam.ukma.com.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import mam.ukma.com.base.UKMAPage;
 import mam.ukma.com.util.Constants;
@@ -24,10 +25,12 @@ public class JobDetailsPage extends UKMAPage{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void saveJob(){
+	public JobConfirmationPage saveJob(){
 		Selenium.waitForElementVisible(driver, ddlSupplier);
 		Selenium.selectByIndex(ddlSupplier, 1);
 		Selenium.clickAndWait(btnSaveJob);
+		return PageFactory.initElements(driver, JobConfirmationPage.class);
+
 	}
 
 }

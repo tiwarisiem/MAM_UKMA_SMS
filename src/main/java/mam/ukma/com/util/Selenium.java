@@ -197,6 +197,17 @@ public class Selenium extends UKMAPage{
 			Assert.fail(exp.getMessage());
 		}
 	}
+	
+	public static String getFieldText(WebElement locator, String attributeName){
+		try{
+			locator.getAttribute(attributeName);
+			return attributeName;
+		}
+		catch(NoSuchElementException ex){
+			ex.getMessage();
+		}
+		return null;
+	}
 
 
 }

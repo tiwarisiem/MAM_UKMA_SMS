@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import mam.ukma.com.pages.MeterPointSearchPage;
 import mam.ukma.com.pages.WorkStreamSelectionPage;
 import mam.ukma.com.util.Constants;
 import mam.ukma.com.util.Selenium;
@@ -19,17 +20,11 @@ public class TopMenu {
 	@FindBy(xpath=Constants.NEWJOBMENU_XPATH)
 	WebElement newJobMenu;
 	
+	@FindBy(xpath=Constants.METERPOINTMENU_XPATH)
+	WebElement meterPointMenu;
+	
 	public TopMenu(WebDriver driver){
 		this.driver=driver;
-	}
-	
-	public void hoverOnJobMenu(){
-		Selenium.hoverOnWebElement(driver, jobMenu);
-	}
-	
-	public WorkStreamSelectionPage clickOnNewJobMenu(){
-		Selenium.clickAndWait(newJobMenu);
-		return PageFactory.initElements(driver, WorkStreamSelectionPage.class);
 	}
 	
 	public WorkStreamSelectionPage goToNewJob(){
@@ -37,6 +32,11 @@ public class TopMenu {
 		Selenium.clickAndWait(newJobMenu);
 		return PageFactory.initElements(driver, WorkStreamSelectionPage.class);
 
+	}
+	
+	public MeterPointSearchPage goToMeterPointSearchPage(){
+		Selenium.clickAndWait(meterPointMenu);
+		return PageFactory.initElements(driver, MeterPointSearchPage.class);
 	}
 	
 

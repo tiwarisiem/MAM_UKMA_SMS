@@ -1,5 +1,7 @@
 package mam.ukma.com.pages;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,7 +49,7 @@ public class MeterPointPage extends UKMAPage{
 	WebElement txtTelephone1;
 	
 	@FindBy(xpath=Constants.SAVEANDNEXTBUTTON_XPATH)
-	WebElement btnNext;
+	WebElement btnSaveAndNext;
 	
 	@FindBy(xpath=Constants.METERPOINT_ERRORMSG_XPATH)
 	public WebElement lblErrorMsg;
@@ -66,7 +68,7 @@ public class MeterPointPage extends UKMAPage{
 		if(result){
 			return PageFactory.initElements(driver, MeterPointPage.class);
 		} */
-		if(!btnNext.isEnabled()){
+		if(!btnSaveAndNext.isEnabled()){
 			return PageFactory.initElements(driver, MeterPointPage.class);
 		}
 		Selenium.selectByIndex(ddPressureTier, 1);
@@ -78,8 +80,37 @@ public class MeterPointPage extends UKMAPage{
 		Selenium.selectByIndex(ddlTitle, 1);
 		Selenium.type(txtSurName, "Tiwari");
 		Selenium.type(txtTelephone1, "9818159545");
-		Selenium.clickAndWait(btnNext);
+		Selenium.clickAndWait(btnSaveAndNext);
 		return PageFactory.initElements(driver, JobDetailsPage.class);
+	}
+	
+	public String meterPointMessage(){
+		String meterPointValidation=lblErrorMsg.getText();
+		return meterPointValidation;
+	}
+	
+	public void updateMeterPoint(String meterPoint){
+		ArrayList<String> before=this.meterPointDetails();
+		Selenium.type(txtMeterPointRefNo, meterPoint);
+		Selenium.clickOnPage(driver);
+		ArrayList<String> after=this.meterPointDetails();
+		if(!before.equals(after)){
+			System.out.println("Meter Point Details desperated.");
+		}
+		Selenium.clickAndWait(btnSaveAndNext);
+	}
+	
+	public ArrayList<String> meterPointDetails(){
+		ArrayList<String> mpDetails=new ArrayList<String>();
+		mpDetails.add(txtAddress1.getAttribute("value"));
+		mpDetails.add(txtAddress2.getAttribute("value"));
+		mpDetails.add(txtPostTown.getAttribute("value"));
+		mpDetails.add(txtPostCode.getAttribute("value"));
+		mpDetails.add(txtSurName.getAttribute("value"));
+		mpDetails.add(txtTelephone1.getAttribute("value"));
+		System.out.println(mpDetails);
+		return mpDetails;
+
 	}
 
 }

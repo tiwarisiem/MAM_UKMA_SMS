@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import mam.ukma.com.pages.JobConfirmationPage;
 import mam.ukma.com.pages.JobDetailsPage;
 import mam.ukma.com.pages.LaunchPage;
 import mam.ukma.com.pages.LoginPage;
@@ -42,12 +43,13 @@ public class JobTest extends BaseTest{
 		 page=meterPointPage.enterMeterPointDetails(mprn);
 		 if(page instanceof MeterPointPage){
 			// String actualResult=meterPointPage.lblErrorMsg.getText();
-			 Assert.assertEquals(meterPointPage.lblErrorMsg.getText(), expectedResult);
+			 Assert.assertEquals(meterPointPage.meterPointMessage(), expectedResult);
 		 }
-		 else if(page instanceof JobDetailsPage){
+	//	 else if(page instanceof JobDetailsPage){
 			 JobDetailsPage jobDetailsPage=(JobDetailsPage)page;
-			 jobDetailsPage.saveJob();
-		 }
+			 JobConfirmationPage jobCoirm=jobDetailsPage.saveJob();
+			 Assert.assertTrue(jobCoirm.confirmationJobMsg(), expectedResult);
+	//	 }
 		
 		 
 	}

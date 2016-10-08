@@ -7,12 +7,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.BeforeTest;
 
 import mam.ukma.com.pages.LaunchPage;
 
 public class BaseTest {
 	
 WebDriver driver;
+	
+
 	
 	public LaunchPage launchBrowser(String browser){
 		try{

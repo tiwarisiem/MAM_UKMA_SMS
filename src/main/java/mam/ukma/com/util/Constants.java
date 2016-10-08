@@ -17,9 +17,12 @@ public class Constants {
 	public static final String JOBCOORFINATOR_XPATH = "//select[@id='MainContent_ddlCoordinator']";
 	public static final String SEARCHJOB_BUTTON_XPATH = "//input[@id='MainContent_btnSearchIncludeCoordinator']";
 	
-	/*--- Work Stream Page Web Element Locators using XPaths --- */
+	/*--- Top Menu Web Element Locators using XPaths --- */
 	public static final String JOBMENU_XPATH = "//*[@id='NavigationMenu']/ul/li[2]/a";
 	public static final String NEWJOBMENU_XPATH = "//*[@id='NavigationMenu:submenu:12']/li[2]/a";
+	public static final String METERPOINTMENU_XPATH = ".//*[@id='NavigationMenu']/ul/li[4]/a";
+
+	/*--- Work Stream Page Web Element Locators using XPaths --- */
 	public static final String SELECTWORKSTREAM_XPATH = "//select[@id='MainContent_ddlWorkStreams']";
 	public static final String METERWORKTYPE_XPATH = "//select[@id='MainContent_ddlMeterWorkTypes']";
 	public static final String CONVERTERWORKTYPE_XPATH = "//select[@id='MainContent_ddlConverterWorkTypes']";
@@ -74,4 +77,12 @@ public class Constants {
 	public static final String JD_RESCHEDULESAVEBTN_XPATH = "//input[@id='MainContent_btnSaveRescheduleJob']";
 	public static final String JD_VALMSGRESCHEDULE_XPATH ="//*[@id='MainContent_llbErrorMessageRecshedule']";
 	
+	/*--- MeterPoint Search Page Web Element Locators using XPaths --- */
+	public static final String METERPOINT_REFNO_XPATH = "//input[@id='MainContent_tbMPRN']";
+	public static final String SEARCHBUTTON_METERPOINT_XPATH = "//input[@id='MainContent_btnSearch']";
+	public static final String EDITBUTTON_METERPOINT_XPATH = "//input[@id='MainContent_gvMeterPointList_ibtnDetails_0']";
+	public static final String EDITBUTTON_VIEWTRANSACTION_XPATH = "//input[@id='MainContent_gvMeterPointList_ibtnTransactions_0']";
+	public static final String EDITBUTTON_MARKETPARTICIPANTS_XPATH = "//input[@id='MainContent_gvMeterPointList_ibtnMarketParticipants_0']";
+	public static final String EDITBUTTON_VIEWASSETS_XPATH = "//input[@id='MainContent_gvMeterPointList_ibtnAssets_0']";
+
 }

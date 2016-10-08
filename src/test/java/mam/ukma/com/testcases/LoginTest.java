@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest{
 			String username, 
 			String password,
 			String expectedResult){
-		if(!TestUtil.isTestRunnable(xls, "LoginTest"))
+		if(!TestUtil.isTestRunnable(xls, "LoginTest") || runMode.equals("N"))
 			throw new SkipException("Test Case is not runnable!");
 		LaunchPage lp=launchBrowser(browser);
 		LoginPage loginPage=lp.goToHomePage("DEV");
