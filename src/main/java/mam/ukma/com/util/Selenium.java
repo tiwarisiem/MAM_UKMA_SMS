@@ -42,6 +42,7 @@ public class Selenium extends UKMAPage{
 		}
 		catch( NoSuchElementException exp){
 			Assert.fail("Web Element "+target.getText()+" is not present on the page! "+exp.getMessage());
+			System.out.println(exp.getStackTrace());
 		}
 		catch(StaleElementReferenceException exp){
 			Assert.fail("Oops Not Attched yet!" +target.getText()+ "||" +exp.getMessage());

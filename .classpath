@@ -20,7 +20,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="var" path="M2_REPO/org/testng/testng/6.9.10/testng-6.9.10.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/testng/testng/6.9.10/testng-6.9.10.jar" sourcepath="/M2_REPO/org/testng/testng/6.9.10/"/>
 	<classpathentry kind="var" path="M2_REPO/com/beust/jcommander/1.48/jcommander-1.48.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/seleniumhq/selenium/selenium-java/2.49.0/selenium-java-2.49.0.jar"/>

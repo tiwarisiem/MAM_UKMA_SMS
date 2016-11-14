@@ -10,7 +10,8 @@
     <classes>
       <class name="mam.ukma.com.testcases.LoginTest">
         <methods>
-          <include name="invalidLoginTest"/>
+          <include name="quit"/>
+          <include name="invalidLoginTest" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- mam.ukma.com.testcases.LoginTest -->
     </classes>

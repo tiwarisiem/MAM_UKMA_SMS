@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [My Sample Suite]" parallel="tests">
-  <test name="LoginTest">
-    <classes>
-      <class name="mam.ukma.com.testcases.LoginTest"/>
-    </classes>
-  </test> <!-- LoginTest -->
-  <test name="LoginTest(failed)" parallel="tests">
+<suite name="Failed suite [My Sample Suite]">
+  <test name="Meter Point Test(failed)">
     <classes>
       <class name="mam.ukma.com.testcases.LoginTest">
         <methods>
-          <include name="invalidLogin"/>
+          <include name="quit"/>
         </methods>
       </class> <!-- mam.ukma.com.testcases.LoginTest -->
+      <class name="mam.ukma.com.testcases.JobTest">
+        <methods>
+          <include name="quit"/>
+          <include name="createNewJob" invocation-numbers="6"/>
+        </methods>
+      </class> <!-- mam.ukma.com.testcases.JobTest -->
     </classes>
-  </test> <!-- LoginTest(failed) -->
+  </test> <!-- Meter Point Test(failed) -->
 </suite> <!-- Failed suite [My Sample Suite] -->

@@ -1,45 +1,424 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="9" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="My Sample Suite" duration-ms="53319" started-at="2016-09-06T18:23:41Z" finished-at="2016-09-06T18:24:34Z">
+  <suite name="My Sample Suite" duration-ms="246219" started-at="2016-09-26T20:00:32Z" finished-at="2016-09-26T20:04:39Z">
     <groups>
     </groups>
-    <test name="LoginTest" duration-ms="53319" started-at="2016-09-06T18:23:41Z" finished-at="2016-09-06T18:24:34Z">
+    <test name="LoginTest" duration-ms="120136" started-at="2016-09-26T20:00:32Z" finished-at="2016-09-26T20:02:32Z">
       <class name="mam.ukma.com.testcases.LoginTest">
-        <test-method status="PASS" signature="invalidLogin(java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.LoginTest@180bc464]" name="invalidLogin" duration-ms="47539" started-at="2016-09-06T23:53:41Z" data-provider="getData" finished-at="2016-09-06T23:54:28Z">
+        <test-method status="PASS" signature="invalidLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.LoginTest@5bf0d49]" name="invalidLoginTest" duration-ms="91540" started-at="2016-09-27T01:30:32Z" data-provider="getData" finished-at="2016-09-27T01:32:04Z">
           <params>
             <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
               <value>
                 <![CDATA[Admin]]>
               </value>
             </param>
-            <param index="1">
+            <param index="3">
               <value>
                 <![CDATA[Globrin@313]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[SMS plc - Meter Assets]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLogin -->
-        <test-method status="PASS" signature="invalidLogin(java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.LoginTest@180bc464]" name="invalidLogin" duration-ms="5748" started-at="2016-09-06T23:54:28Z" data-provider="getData" finished-at="2016-09-06T23:54:34Z">
+        </test-method> <!-- invalidLoginTest -->
+        <test-method status="PASS" signature="invalidLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.LoginTest@5bf0d49]" name="invalidLoginTest" duration-ms="15415" started-at="2016-09-27T01:32:04Z" data-provider="getData" finished-at="2016-09-27T01:32:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Adminyy]]>
+                <![CDATA[Y]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Globrin@313]]>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Culprit]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[random@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[* Invalid Username or Password!]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLogin -->
+        </test-method> <!-- invalidLoginTest -->
+        <test-method status="PASS" signature="invalidLoginTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.LoginTest@5bf0d49]" name="invalidLoginTest" duration-ms="9532" started-at="2016-09-27T01:32:19Z" data-provider="getData" finished-at="2016-09-27T01:32:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[FMcNeil]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[random@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Your account is temporary locked due to multiple login attempts. To unlock your account please contact system administrator.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLoginTest -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:mam.ukma.com.testcases.LoginTest@5bf0d49]" name="quit" is-config="true" duration-ms="3613" started-at="2016-09-27T01:32:29Z" finished-at="2016-09-27T01:32:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
       </class> <!-- mam.ukma.com.testcases.LoginTest -->
     </test> <!-- LoginTest -->
+    <test name="Meter Point Test" duration-ms="125968" started-at="2016-09-26T20:02:33Z" finished-at="2016-09-26T20:04:39Z">
+      <class name="mam.ukma.com.testcases.JobTest">
+        <test-method status="PASS" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="21369" started-at="2016-09-27T01:32:33Z" data-provider="getData" finished-at="2016-09-27T01:32:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Install]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[5656555454]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[* A Meter is already installed on this meter point.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="PASS" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="13847" started-at="2016-09-27T01:32:54Z" data-provider="getData" finished-at="2016-09-27T01:33:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Exchange]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1000000014]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[* Cannot exchange meter as there is no existing meter on this meter point.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="PASS" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="25539" started-at="2016-09-27T01:33:08Z" data-provider="getData" finished-at="2016-09-27T01:33:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Remove]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1000000014]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[* Cannot remove meter as the meter does not exist on this meter point.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="PASS" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="15681" started-at="2016-09-27T01:33:33Z" data-provider="getData" finished-at="2016-09-27T01:33:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Relocation]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1000000014]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Relocation can be done only with UKMA meters. Please change work type to Relocation & Exchange!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="FAIL" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="25304" started-at="2016-09-27T01:33:49Z" data-provider="getData" finished-at="2016-09-27T01:34:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Relocation_And_Exchange]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1000000014]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[* Cannot relocate & exchange meter as there is no existing meter on this meter point.]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Web Element [[ChromeDriver: chrome on WIN8_1 (e010528fe63d156b44318676f600f16b)] -> xpath: //select[@id='MainContent_ddlMeterWorkTypes']] is not present on the page! no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='MainContent_ddlMeterWorkTypes']"}
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.43.142', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\ANUPAM\AppData\Local\Temp\scoped_dir4396_31315}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e010528fe63d156b44318676f600f16b
+*** Element info: {Using=xpath, value=//select[@id='MainContent_ddlMeterWorkTypes']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Web Element [[ChromeDriver: chrome on WIN8_1 (e010528fe63d156b44318676f600f16b)] -> xpath: //select[@id='MainContent_ddlMeterWorkTypes']] is not present on the page! no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='MainContent_ddlMeterWorkTypes']"}
+  (Session info: chrome=53.0.2785.116)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.43.142', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\ANUPAM\AppData\Local\Temp\scoped_dir4396_31315}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e010528fe63d156b44318676f600f16b
+*** Element info: {Using=xpath, value=//select[@id='MainContent_ddlMeterWorkTypes']}
+	at org.testng.Assert.fail(Assert.java:94)
+	at mam.ukma.com.util.Selenium.selectByVisibleText(Selenium.java:109)
+	at mam.ukma.com.pages.WorkStreamSelectionPage.selectWorkStream(WorkStreamSelectionPage.java:40)
+	at mam.ukma.com.testcases.JobTest.createNewJob(JobTest.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="PASS" signature="createNewJob(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="createNewJob" duration-ms="20840" started-at="2016-09-27T01:34:14Z" data-provider="getData" finished-at="2016-09-27T01:34:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Domestic Transactional]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Relocation]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1011100014]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Relocation can be done only with UKMA meters. Please change work type to Relocation & Exchange!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewJob -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:mam.ukma.com.testcases.JobTest@489115ef]" name="quit" is-config="true" duration-ms="3216" started-at="2016-09-27T01:34:35Z" finished-at="2016-09-27T01:34:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- mam.ukma.com.testcases.JobTest -->
+    </test> <!-- Meter Point Test -->
   </suite> <!-- My Sample Suite -->
 </testng-results>
