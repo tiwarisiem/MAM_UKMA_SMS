@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="My Sample Suite" >
+<suite name="My Sample Suite"  parallel="tests" thread-count="5">
 <test name="LoginTest">
     <classes>
         <class name="mam.ukma.com.testcases.LoginTest" ></class> 

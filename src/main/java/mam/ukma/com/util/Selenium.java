@@ -29,7 +29,7 @@ public class Selenium extends UKMAPage{
 	public static void type(WebElement target, String typeValue){
 		logger.debug("|type|" +target+"|"+typeValue+"|");
 		try{
-			if(target.isDisplayed()){
+			if(isDisplayed(target)){
 				if(target.isEnabled()){
 					target.clear();
 					target.sendKeys(typeValue);
@@ -208,6 +208,20 @@ public class Selenium extends UKMAPage{
 			ex.getMessage();
 		}
 		return null;
+	}
+	//13/12/2016
+	//Newly created code for checking whether method works or not
+	public static boolean isDisplayed(WebElement element){
+		try{
+			if(element.isDisplayed()){
+				Assert.fail("Element should not have been displayed but it was!");
+				return false;
+			}
+		}
+		catch(NoSuchElementException exp){
+			exp.getStackTrace();
+		}
+		return true;
 	}
 
 
