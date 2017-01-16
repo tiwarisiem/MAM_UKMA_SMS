@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [My Sample Suite]">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [My Sample Suite]" parallel="tests">
   <test name="LoginTest">
     <classes>
       <class name="mam.ukma.com.testcases.LoginTest"/>
@@ -11,12 +11,12 @@
       <class name="mam.ukma.com.testcases.JobTest"/>
     </classes>
   </test> <!-- Meter Point Test -->
-  <test name="Meter Point Test(failed)">
+  <test name="Meter Point Test(failed)" parallel="tests">
     <classes>
       <class name="mam.ukma.com.testcases.JobTest">
         <methods>
           <include name="quit"/>
-          <include name="createNewJob" invocation-numbers="4"/>
+          <include name="createNewJob" invocation-numbers="0 1 2 3 4 5 6"/>
         </methods>
       </class> <!-- mam.ukma.com.testcases.JobTest -->
       <class name="mam.ukma.com.testcases.LoginTest">
@@ -26,4 +26,19 @@
       </class> <!-- mam.ukma.com.testcases.LoginTest -->
     </classes>
   </test> <!-- Meter Point Test(failed) -->
+  <test name="LoginTest(failed)" parallel="tests">
+    <classes>
+      <class name="mam.ukma.com.testcases.JobTest">
+        <methods>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- mam.ukma.com.testcases.JobTest -->
+      <class name="mam.ukma.com.testcases.LoginTest">
+        <methods>
+          <include name="quit"/>
+          <include name="invalidLoginTest" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- mam.ukma.com.testcases.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [My Sample Suite] -->

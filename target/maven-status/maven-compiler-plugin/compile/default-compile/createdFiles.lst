@@ -1,0 +1,17 @@
+mam\ukma\com\common\TopMenu.class
+mam\ukma\com\pages\MeterPointAssetTransaction.class
+mam\ukma\com\util\Xls_Reader.class
+mam\ukma\com\util\Constants.class
+mam\ukma\com\pages\MeterPointSearchPage.class
+mam\ukma\com\base\UKMAPage.class
+mam\ukma\com\pages\MeterPointPage.class
+mam\ukma\com\pages\LoginPage.class
+mam\ukma\com\pages\WorkStreamSelectionPage.class
+mam\ukma\com\pages\SearchJobPage.class
+mam\ukma\com\pages\JobDetailsPage.class
+mam\ukma\com\pages\MeterPointMarketParticipants.class
+mam\ukma\com\util\Selenium.class
+mam\ukma\com\pages\JobConfirmationPage.class
+mam\ukma\com\pages\MeterPointAssetDetails.class
+mam\ukma\com\util\TestUtil.class
+mam\ukma\com\pages\LaunchPage.class

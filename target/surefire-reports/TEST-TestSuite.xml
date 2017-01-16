@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="250.133" tests="9" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="123.702" tests="10" errors="0" skipped="6" failures="4">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_60\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 8.1"/>
     <property name="classworlds.conf" value="F:\Softwares\apache-maven-3.3.3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_60\bin;F:\Softwares\apache-ant-1.9.6-bin\apache-ant-1.9.6\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Skype\Phone\;F:\Softwares\apache-maven-3.3.3\bin;C:\Windows\System32;C:\Program Files\VisualSVN Server\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_60\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_60\bin;F:\Softwares\apache-ant-1.9.6-bin\apache-ant-1.9.6\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\DTS\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;c:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Skype\Phone\;F:\Softwares\apache-maven-3.3.3\bin;C:\Windows\System32;C:\Program Files\VisualSVN Server\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,34 +62,189 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="91.537"/>
-  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="15.409"/>
-  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="9.532"/>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="21.367"/>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="13.846"/>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="25.539"/>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="15.682"/>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="25.44">
-    <failure message="Web Element [[ChromeDriver: chrome on WIN8_1 (e010528fe63d156b44318676f600f16b)] -&gt; xpath: //select[@id=&apos;MainContent_ddlMeterWorkTypes&apos;]] is not present on the page! no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//select[@id=&apos;MainContent_ddlMeterWorkTypes&apos;]&quot;}&#10;  (Session info: chrome=53.0.2785.116)&#10;  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 1.19 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb44deba2067b1761c8862ef21d55250e063&apos;, time: &apos;2016-01-13 11:57:39&apos;&#10;System info: host: &apos;hp&apos;, ip: &apos;192.168.43.142&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\ANUPAM\AppData\Local\Temp\scoped_dir4396_31315}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: e010528fe63d156b44318676f600f16b&#10;*** Element info: {Using=xpath, value=//select[@id=&apos;MainContent_ddlMeterWorkTypes&apos;]}" type="java.lang.AssertionError">java.lang.AssertionError: 
-Web Element [[ChromeDriver: chrome on WIN8_1 (e010528fe63d156b44318676f600f16b)] -> xpath: //select[@id='MainContent_ddlMeterWorkTypes']] is not present on the page! no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='MainContent_ddlMeterWorkTypes']"}
-  (Session info: chrome=53.0.2785.116)
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[Y
+N
+Chrome
+Admin
+Globrin@313
+SMS plc - Meter Assets
+Chrome
+Domestic Transactional
+Y
+Chrome
+Culprit
+random@123
+* Invalid Username or Password!
+y
+Chrome
+Install
+FMcNeil
+random@123
+5656555454
+Your account is temporary locked due to multiple login attempts. To unlock your account please contact system administrator.
+
+* A Meter is already installed on this meter point.
+N
+Chrome
+Domestic Transactional
+Exchange
+1000000014
+
+* Cannot exchange meter as there is no existing meter on this meter point.
+N
+Chrome
+Domestic Transactional
+Remove
+1000000014
+
+* Cannot remove meter as the meter does not exist on this meter point.
+N
+Chrome
+Domestic Transactional
+Relocation
+1000000014
+
+Relocation can be done only with UKMA meters. Please change work type to Relocation & Exchange!
+N
+Chrome
+Domestic Transactional
+Relocation_And_Exchange
+1000000014
+
+* Cannot relocate & exchange meter as there is no existing meter on this meter point.
+N
+Chrome
+Domestic Transactional
+Relocation
+1011100014
+
+Relocation can be done only with UKMA meters. Please change work type to Relocation & Exchange!
+Y
+Chrome
+Domestic Transactional
+Install
+1111110014
+
+Job Created Successfully!
+LoginTest---Y
+MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="0">
+    <skipped message="Test Case is not runnable!"/>
+    <system-out><![CDATA[MeterPoint---N
+CreateJob---Y
+]]></system-out>
+  </testcase>
+  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="48.655">
+    <failure message="session not created exception&#10;from unknown error: Runtime.executionContextCreated has invalid &apos;context&apos;: {&quot;auxData&quot;:{&quot;frameId&quot;:&quot;788.1&quot;,&quot;isDefault&quot;:true},&quot;id&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;origin&quot;:&quot;chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb&quot;}&#10;  (Session info: chrome=55.0.2883.87)&#10;  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 37.34 seconds&#10;Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb44deba2067b1761c8862ef21d55250e063&apos;, time: &apos;2016-01-13 11:57:39&apos;&#10;System info: host: &apos;hp&apos;, ip: &apos;192.168.0.125&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created exception
+from unknown error: Runtime.executionContextCreated has invalid 'context': {"auxData":{"frameId":"788.1","isDefault":true},"id":1,"name":"","origin":"chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb"}
+  (Session info: chrome=55.0.2883.87)
   (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.19 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Command duration or timeout: 37.34 seconds
 Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
-System info: host: 'hp', ip: '192.168.43.142', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={userDataDir=C:\Users\ANUPAM\AppData\Local\Temp\scoped_dir4396_31315}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=53.0.2785.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e010528fe63d156b44318676f600f16b
-*** Element info: {Using=xpath, value=//select[@id='MainContent_ddlMeterWorkTypes']}
-	at mam.ukma.com.testcases.JobTest.createNewJob(JobTest.java:40)
+	at mam.ukma.com.testcases.JobTest.createNewJob(JobTest.java:34)
 </failure>
     <system-out><![CDATA[MeterPoint---N
 CreateJob---Y
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067) on port 5828
+    <system-err><![CDATA[StaStarrtingt iCnhg ChromeDriver 2.r2o0me.D3r5i3v1e4r 2.205. 3(533413b531d3145 (343b531d31eeb933ec778dbcf7081e6e2b89a313ec778dbcf7081628a1396067) on port 12008
+Only local connections are allowed.
+396067) on port 27241
+Only local connections are allowed.
+log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+]]></system-err>
+  </testcase>
+  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="48.655">
+    <failure message="session not created exception&#10;from unknown error: Runtime.executionContextCreated has invalid &apos;context&apos;: {&quot;auxData&quot;:{&quot;frameId&quot;:&quot;14408.1&quot;,&quot;isDefault&quot;:true},&quot;id&quot;:1,&quot;name&quot;:&quot;&quot;,&quot;origin&quot;:&quot;chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb&quot;}&#10;  (Session info: chrome=55.0.2883.87)&#10;  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 40.88 seconds&#10;Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb44deba2067b1761c8862ef21d55250e063&apos;, time: &apos;2016-01-13 11:57:39&apos;&#10;System info: host: &apos;hp&apos;, ip: &apos;192.168.0.125&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created exception
+from unknown error: Runtime.executionContextCreated has invalid 'context': {"auxData":{"frameId":"14408.1","isDefault":true},"id":1,"name":"","origin":"chrome-extension://aapnijgdinlhnhlmodcfapnahmbfebeb"}
+  (Session info: chrome=55.0.2883.87)
+  (Driver info: chromedriver=2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067),platform=Windows NT 6.3 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40.88 seconds
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+</failure>
+  </testcase>
+  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="55.133">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb44deba2067b1761c8862ef21d55250e063&apos;, time: &apos;2016-01-13 11:57:39&apos;&#10;System info: host: &apos;hp&apos;, ip: &apos;192.168.0.125&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: ChromeDriver
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+Caused by: org.openqa.selenium.WebDriverException: 
+java.net.SocketException: Connection reset
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: ChromeDriver
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+Caused by: java.net.SocketException: Connection reset
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+</failure>
+    <system-out><![CDATA[LoginTest---Y
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067) on port 25064
 Only local connections are allowed.
 ]]></system-err>
   </testcase>
-  <testcase name="createNewJob" classname="mam.ukma.com.testcases.JobTest" time="20.834"/>
+  <testcase name="invalidLoginTest" classname="mam.ukma.com.testcases.LoginTest" time="13.446">
+    <failure message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.&#10;Build info: version: &apos;2.49.0&apos;, revision: &apos;365eeb44deba2067b1761c8862ef21d55250e063&apos;, time: &apos;2016-01-13 11:57:39&apos;&#10;System info: host: &apos;hp&apos;, ip: &apos;192.168.0.125&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_60&apos;&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: ChromeDriver
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+Caused by: org.openqa.selenium.WebDriverException: 
+java.net.SocketException: Connection reset
+Build info: version: '2.49.0', revision: '365eeb44deba2067b1761c8862ef21d55250e063', time: '2016-01-13 11:57:39'
+System info: host: 'hp', ip: '192.168.0.125', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_60'
+Driver info: driver.version: ChromeDriver
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+Caused by: java.net.SocketException: Connection reset
+	at mam.ukma.com.testcases.LoginTest.invalidLoginTest(LoginTest.java:29)
+</failure>
+    <system-out><![CDATA[LoginTest---Y
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.20.353145 (343b531d31eeb933ec778dbcf7081628a1396067) on port 29875
+Only local connections are allowed.
+]]></system-err>
+  </testcase>
 </testsuite>
